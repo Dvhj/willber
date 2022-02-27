@@ -38,8 +38,10 @@ const getGoods = () => {
 
 				localStorage.setItem('goods', JSON.stringify(array))
 
-				if (window.location.pathname !== "/goods.html"){
-					window.location.href = "/goods.html"
+				console.log(window.location.pathname)
+
+				if (window.location.pathname !== "/D:/%D0%A7%D1%82%D0%BE-%D1%82%D0%BE/%D1%81%D0%B0%D0%B9%D1%82%D1%8B/Willber/goods.html"){
+					window.location.href = "/D:/%D0%A7%D1%82%D0%BE-%D1%82%D0%BE/%D1%81%D0%B0%D0%B9%D1%82%D1%8B/Willber/goods.html"
 				} else {
 					renderGoods(array)
 				}

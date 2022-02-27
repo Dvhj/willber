@@ -5,6 +5,7 @@ const cart = function() {
 	const goodsContainer = document.querySelector('.long-goods-list')
 	const cartTable = document.querySelector('.cart-table__goods')
 	const modalForm = document.querySelector('.modal-form')
+	const cartTotal = document.querySelector('.card-table__total')
 
 	const deleteCartItem = (id) => {
 		const cart = JSON.parse(localStorage.getItem('cart'))
@@ -92,6 +93,12 @@ const cart = function() {
 					console.log('delete')
 				}
 			})
+
+			let total = 0
+			goods.forEach(item => {
+				total = +total + +item.price * +item.count
+				cartTotal.innerHTML = `$${total}`
+			})
 			
 		})
 	}
@@ -114,6 +121,8 @@ const cart = function() {
 		console.log('submit')
 		sendForm()
 		cart.style.display = ''
+		localStorage.removeItem('cart')
+		cartTotal.innerHTML = ''
 	})
 
 
