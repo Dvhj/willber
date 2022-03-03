@@ -22,6 +22,10 @@ img {
     margin: 0;
 }
 
+.navigation-item:hover {
+    border-bottom: 1px solid #4592FF;
+}
+
 .navigation-link {
     text-decoration: none;
     text-transform: uppercase;
@@ -52,6 +56,26 @@ button {
     line-height: 20px;
     display: flex;
     align-items: center;
+}
+
+.button-active {
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid #4592FF;
+    color: #111;
+    font-family: 'Lato',
+        sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.button:hover {
+    background: #1C7AFF;
 }
 
 .button-icon,
@@ -93,11 +117,19 @@ button {
 }
 
 .slide-1 {
-    background: #B4D1E0 url('../img/slide-image-1.png') no-repeat top right 30%;
+    background: #B4D1da url('../img/slide-image-1.png') no-repeat top right 30%;
 }
 
 .slide-2 {
-    background: #b9e0b4 url('../img/slide-image-1.png') no-repeat top right 30%;
+    background: #b9e0b4 url('../img/pngeg.png') no-repeat top right 30%;
+}
+
+.slide-3 {
+    background: #E7D9FF url('../img/sweater.png') no-repeat top 100% right 30%;
+}
+
+.slide-4 {
+    background: #B4D1E0 url('../img/sleev.png') no-repeat top 60%  right 30%;;
 }
 
 .label {
@@ -143,6 +175,10 @@ button {
     background-color: transparent;
     border: none;
     cursor: pointer;
+}
+
+.slider-button:active {
+    width: 65px;
 }
 
 .card {
@@ -248,7 +284,11 @@ button {
     line-height: 20px;
     padding: 10px;
 }
-
+.more:hover{
+    background-color: #4592FF;
+    border-radius: 20px;
+    color: #fff;
+}
 .goods-card {
     display: flex;
     flex-direction: column;
@@ -420,7 +460,8 @@ button {
 .cart-table th,
 .cart-table td {
     text-align: left;
-    border: 1px solid black
+    border: 1px solid black;
+    cursor: default;
 }
 
 .cart-buy {

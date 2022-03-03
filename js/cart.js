@@ -12,8 +12,14 @@ const cart = function() {
 		const newCart = cart.filter(good => {
 			return good.id !== id
 		})
-		localStorage.setItem( 'cart', JSON.stringify(newCart))
-		renderCartGoods(JSON.parse(localStorage.getItem('cart')))
+		if ( newCart.length > 1){
+			localStorage.setItem( 'cart', JSON.stringify(newCart))
+			renderCartGoods(JSON.parse(localStorage.getItem('cart')))
+		} else {
+			cartTotal.innerHTML = ''
+			localStorage.setItem( 'cart', JSON.stringify(newCart))
+			renderCartGoods(JSON.parse(localStorage.getItem('cart')))
+		}
 	}
 
 
@@ -122,7 +128,6 @@ const cart = function() {
 		sendForm()
 		cart.style.display = ''
 		localStorage.removeItem('cart')
-		cartTotal.innerHTML = ''
 	})
 
 
