@@ -51,7 +51,7 @@ const getGoods = () => {
 	links.forEach(link => {
 		link.addEventListener(('click'), (event) => {
 			event.preventDefault()
-			const linkValue = link.textContent
+			const linkValue = link.children[1].textContent
 			const category = link.dataset.field
 			console.log(category)
 			console.log(linkValue)

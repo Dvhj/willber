@@ -560,6 +560,33 @@ button {
     border-bottom-left-radius: 0;
 }
 
+.footer-nav {
+    display: none;
+    background: #fff;
+    position: sticky;
+    bottom: 0px;
+}
+.footer-nav ul{
+    justify-content: space-around;
+}
+
+.footer-navigation-item a{
+    text-align: center;
+    margin-top:10%;
+    display: flex;
+    flex-direction:column; 
+    font-size:10px;
+}
+
+.footer-navigation-item a:active{
+    color:black;
+}
+
+.navigation-link img{
+    margin: 0 auto;
+    width:60%;
+}
+
 
 @media (max-width: 1200px) {
     .slide-1 {
@@ -572,6 +599,10 @@ button {
 }
 
 @media (max-width: 992px) {
+    .footer-nav {
+        display: block;
+    }
+
     .slider-nav {
         display: none;
     }
