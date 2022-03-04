@@ -51,11 +51,19 @@ const getGoods = () => {
 	links.forEach(link => {
 		link.addEventListener(('click'), (event) => {
 			event.preventDefault()
-			const linkValue = link.children[1].textContent
-			const category = link.dataset.field
-			console.log(category)
-			console.log(linkValue)
-			getData(linkValue, category)
+			if (link.children.length > 1){
+				const linkValue = link.children[1].textContent
+				const category = link.dataset.field
+				console.log(category)
+				console.log(linkValue)
+				getData(linkValue, category)
+			} else {
+				const linkValue = link.textContent
+				const category = link.dataset.field
+				console.log(category)
+				console.log(linkValue)
+				getData(linkValue, category)
+			}
 		})
 	})
 
