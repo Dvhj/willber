@@ -40,8 +40,8 @@ const getGoods = () => {
 
 				console.log(window.location.pathname)
 
-				if (window.location.pathname !== "/D:/%D0%A7%D1%82%D0%BE-%D1%82%D0%BE/%D1%81%D0%B0%D0%B9%D1%82%D1%8B/Willber/goods.html"){
-					window.location.href = "/D:/%D0%A7%D1%82%D0%BE-%D1%82%D0%BE/%D1%81%D0%B0%D0%B9%D1%82%D1%8B/Willber/goods.html"
+				if (window.location.pathname !== "/willber/goods.html"){
+					window.location.href = "/willber/goods.html"
 				} else {
 					renderGoods(array)
 				}
@@ -60,7 +60,7 @@ const getGoods = () => {
 	})
 
 
-	if (localStorage.getItem('goods') && window.location.pathname == "/D:/%D0%A7%D1%82%D0%BE-%D1%82%D0%BE/%D1%81%D0%B0%D0%B9%D1%82%D1%8B/Willber/goods.html") {
+	if (localStorage.getItem('goods') && window.location.pathname == "/willber/goods.html") {
 		renderGoods(JSON.parse(localStorage.getItem('goods')))
 		}
 
