@@ -38,8 +38,8 @@ const search = function() {
 				localStorage.setItem('goods', JSON.stringify(array))
 
 				
-				if (window.location.pathname !== "/D:/%D0%A7%D1%82%D0%BE-%D1%82%D0%BE/%D1%81%D0%B0%D0%B9%D1%82%D1%8B/Willber/goods.html"){
-					window.location.href = "/D:/%D0%A7%D1%82%D0%BE-%D1%82%D0%BE/%D1%81%D0%B0%D0%B9%D1%82%D1%8B/Willber/goods.html"
+				if (window.location.pathname !== "/willber/goods.html"){
+					window.location.href = "/willber/goods.html"
 				} else {
 					renderGoods(array)
 				}
